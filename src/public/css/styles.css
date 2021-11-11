@@ -1,0 +1,149 @@
+/* NAVBAR */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    font-family: sans-serif;
+    padding: 80px 0px 100px 0px;
+}
+
+.header {
+    background-color: #454545;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.nav a p:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    padding: 0;
+    margin-left: 50px;
+    margin-top: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 50px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 20px;
+    margin: 20px 15px;
+    width: max-content;
+}
+
+.nav-menu-link {
+    background-color: #ef6c00;
+    color: white;
+    padding: 5px 30px;
+    border: 3px solid #252525;
+    border-radius: 10px;
+}
+
+.nav-menu-link:hover {
+    background-color: #e65100;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+
+/* HOME */
+.main {
+    background-color: blue;
+    padding-bottom: 40px;
+}
+.banner {
+    min-height: 30rem;
+    width: 100%;
+    height: 540px;
+    padding-top: 1rem;
+    background: url('/img/background.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    background-color:rgba(0,0,0, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.banner .banner-main h1 {
+    color: #fff;
+    position: relative;
+}
+
+.banner .banner-main p {
+    color: #fff;
+    position: relative;
+}
+
+.banner .banner-main a {
+    color: #fff;
+    position: relative;
+}
+
+.banner-main {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.banner-main h1 {
+    font-size: 6rem;
+    padding: 20px 0px;
+}
+
+.banner-main p {
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+.info {
+    background-color: yellow;
+    margin: 40px 40px 0px 40px;
+}
