@@ -1,14 +1,14 @@
 <main class="main-add">
     
     <div class="card-main">
-        <h1>Create contact</h1>
+        <h1>Edit contact</h1>
         <div class="card-body">
-            <form action="/number/add" method="POST">
+            <form action="/number/edit/{{contact.id}}" method="POST">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="title" placeholder="Name" autofocus required>
+                    <input type="text" value="{{contact.title}}" class="form-control" name="title" placeholder="Name" autofocus required>
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control" name="telefono" placeholder="Phone Number" required>
+                    <input type="number" value="{{contact.number}}" class="form-control" name="telefono" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
                     <button class="btn-green">

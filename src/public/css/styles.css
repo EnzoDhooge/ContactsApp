@@ -5,9 +5,9 @@
 }
 
 body {
-    background: #f0f0f0;
+    background: #d0d0d0;
     font-family: sans-serif;
-    padding: 80px 0px 100px 0px;
+    padding-top: 80px;
 }
 
 .header {
@@ -17,6 +17,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 .nav {
@@ -83,8 +84,8 @@ body {
 
 /* HOME */
 .main {
-    background-color: blue;
-    padding-bottom: 40px;
+    background-color: #e0e0e0;
+    padding-bottom: 70px;
 }
 .banner {
     min-height: 30rem;
@@ -140,10 +141,229 @@ body {
 
 .banner-main p {
     font-size: 2rem;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
 }
 
-.info {
-    background-color: yellow;
-    margin: 40px 40px 0px 40px;
+.container-info {
+    background-color: #fff;
+    width: 80%;
+    margin: 55px auto 0px auto;
+}
+
+.info-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-main h2 {
+    font-size: 2.5rem;
+    width: 55%;
+    margin: 0px auto;
+}
+
+.info-main img {
+    width: 27%;
+    height: auto;
+    margin: 0;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #252525;
+    color: white;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-banner {
+    font-size: 1.2rem;
+    background-color: #1e88e5;
+    color: white;
+    padding: 7px 25px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.btn-banner:hover {
+    background-color: #1565c0;
+    transition: 0.2s;
+}
+
+
+/* FORMULARIO ADD */
+.main-add {
+    background-color: #e0e0e0;
+    padding: 130px 0px;
+}
+
+.card-main {
+    background-color: #fff;
+    width: 30%;
+    height: auto;
+    margin: 0px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+}
+
+.card-main h1 {
+    font-size: 2.7rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+}
+
+.form-group input {
+    padding: 8px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.form-group input,
+.form-group button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.btn-green {
+    font-size: 1.2rem;
+    background-color: #09ac11;
+    color: white;
+    padding: 7px 25px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.btn-green:hover {
+    background-color: #0d920d;
+    transition: 0.2s;
+}
+
+
+/* LISTAR CONTACTOS */
+.main-list {
+    background-color: #d0d0d0;
+    min-height: 650px;
+    padding: 70px 80px;
+}
+
+.container-list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-gap: 20px 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.list-contact {
+    background-color: #fff;
+    justify-self: center;
+    text-align: center;
+    padding: 15px 20px 20px 20px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+}
+
+.list-contact h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.list-contact h3 {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.list-contact p {
+    margin-bottom: 10px;
+}
+.card-button {
+    margin-bottom: 3px;
+}
+
+.card-button a {
+    margin-left: 5px;
+}
+
+.btn-red-card {
+    background-color: #c62828;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.btn-red-card:hover {
+    background-color: #b71c1c;
+}
+
+.btn-green-card {
+    background-color: #09ac11;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.btn-green-card:hover {
+    background-color: #0d920d;
+}
+
+.container-null {
+    background-color: #fff;
+    width: 30%;
+    height: auto;
+    margin: 0px auto;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+}
+
+.container-null p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+
+/* MESSAGE FLASH */
+.alert-success {
+    width: 65%;
+    height: auto;
+    margin: 5px auto 0px auto;
+    border-radius: 4px;
+    color: rgb(2, 90, 2);
+    padding: 15px;
+    background-color: rgba(134, 163, 134, 0.781);
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-success button {
+    background-color: rgba(134, 163, 134, 0.781);
+    color: rgb(2, 90, 2);
+    border: none;
+    cursor: pointer;
+}
+
+.alert-success button:hover {
+    color:rgb(1, 32, 1);
+}
+
+.container-message {
+    margin-left: 37%;
+    text-align: center;
 }

@@ -1,0 +1,24 @@
+<main class="main-list">
+
+    
+    <div class="container-list">
+        {{#each contacts}}
+        <div class="list-contact">
+            <h2>{{ title }}</h2>
+            <h3>{{ number }}</h3>
+            <p>{{ timeago created_at }}</p>
+            <div class="card-button">
+                <a href="/number/delete/{{id}}" class="nav-link btn-red-card">DELETE</a>
+                <a href="/number/edit/{{id}}" class="nav-link btn-green-card">EDIT</a>
+            </div>
+        </div> 
+        {{else}} 
+    </div>
+    
+    <div class="container-null">
+        <p>There are not contact saved yet</p>
+        <a href="/number/add">Create One!</a>
+    </div>
+    {{/each}}
+
+</main>
