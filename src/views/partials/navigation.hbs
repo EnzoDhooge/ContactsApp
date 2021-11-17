@@ -1,9 +1,30 @@
 <header class="header">
     <nav class="nav">
-        <a href="#"><img src="/img/logo.png" class="logo" alt="Logo"><p>Contacts</p></a>
+        <a href="/"><img src="/img/logo.png" class="logo" alt="Logo">
+            <p>Contacts</p>
+        </a>
+
+        {{#if user}}
         <ul class="nav-menu">
-            <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">SignUp</a></li>
-            <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Log In</a></li>
+            <li class="nav-menu-item dropdown"><a href="#" class="nav-link">Options</a>
+                <ul class="submenu">
+                    <li class="nav-link"><a href="/number">My contacts</a></li>
+                    <li class="nav-link"><a href="/number/add">Add contacts</a></li>
+                </ul>
+            </li>
+            <li class="nav-menu-item dropdown"><a href="#" class="nav-link">Account</a>
+                <ul class="submenu">
+                    <li class="nav-link"><a href="#">Profile</a></li>
+                    <li class="nav-link"><a href="/logout">Log out</a></li>
+                </ul>
+            </li>
         </ul>
+        {{else}}
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a href="/signup" class="nav-menu-link nav-link">SignUp</a></li>
+            <li class="nav-menu-item"><a href="/signin" class="nav-menu-link nav-link">Log In</a></li>
+        </ul>
+        {{/if}}
+
     </nav>
 </header>

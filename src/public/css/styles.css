@@ -28,6 +28,7 @@ body {
 .nav-link {
     color: white;
     text-decoration: none;
+    list-style: none;
 }
 
 .nav a {
@@ -81,10 +82,50 @@ body {
     transition: 0.2s;
 }
 
+.nav-menu .dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown > a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+/* submenu */
+.submenu {
+    position: absolute;   
+    background-color: rgb(2, 124, 172);
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    display: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-menu .dropdown:hover .submenu {
+    display: block;
+}
+
+.nav-menu .dropdown:hover {
+    background-color: rgb(2, 124, 172);
+}
+
+.submenu li a:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
 
 /* HOME */
 .main {
-    background-color: #e0e0e0;
+    background-color: #d0d0d0;
     padding-bottom: 70px;
 }
 .banner {
@@ -200,8 +241,8 @@ body {
 
 /* FORMULARIO ADD */
 .main-add {
-    background-color: #e0e0e0;
-    padding: 130px 0px;
+    background-color: #d0d0d0;
+    padding: 70px 0px 150px 0px;
 }
 
 .card-main {
@@ -348,6 +389,9 @@ body {
     color: rgb(2, 90, 2);
     padding: 15px;
     background-color: rgba(134, 163, 134, 0.781);
+    position: absolute;
+    left: 20%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
 }
@@ -359,6 +403,28 @@ body {
     cursor: pointer;
 }
 
+.alert-message {
+    width: 65%;
+    height: auto;
+    margin: 5px auto 0px auto;
+    border-radius: 4px;
+    color: rgb(90, 2, 2);
+    padding: 15px;
+    background-color: rgba(163, 134, 134, 0.781);
+    position: absolute;
+    left: 20%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-message button {
+    background-color: rgba(163, 134, 134, 0.781);
+    color: rgb(90, 2, 2);;
+    border: none;
+    cursor: pointer;
+}
+
 .alert-success button:hover {
     color:rgb(1, 32, 1);
 }
@@ -366,4 +432,9 @@ body {
 .container-message {
     margin-left: 37%;
     text-align: center;
+}
+
+.sign-icono {
+    width: 40%;
+    height: auto;
 }

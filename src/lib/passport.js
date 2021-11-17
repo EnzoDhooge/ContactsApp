@@ -9,22 +9,39 @@ passport.use('local.signin', new LocalStrategy({
     usernameField: 'username',
     passwordField: 'password',
     passReqToCallback: true
-}, (req, username, password, done) => {
+}, async(req, username, password, done) => {
+
+    const rows = await connection.query('SELECT * FROM users WHERE username = ?', [username]);
     
-    connection.query('SELECT * FROM users WHERE username = ?', [username], (err, rows) => {
-        if(rows.length > 0) {
-            const user = rows[0];
-            const validPassword = helpers.matchPassword(password, user.password);
-            
-            if(validPassword) {
-                done(null, user, req.flash('success','Welcome ' + user.username));
-            } else {
-                done(null, false, req.flash('message','Incorrect Password'));
-            }
+    if (rows.length > 0) {
+
+        const user = rows[0];
+        const validPassword = await helpers.matchPassword(password, user.password);
+        console.log(validPassword);
+        if (validPassword) {
+            done(null, user, req.flash('success', `Welcome ${user.fullname}`));
         } else {
-            return done(null, false, req.flash('message', 'The Username does not exist'));
+            done(null, false, req.flash('message','Incorrect password'));
         }
-    });
+
+    } else {
+        return done(null, false, req.flash('message', 'The Username does not exists'));
+    }
+    
+    // connection.query('SELECT * FROM users WHERE username = ?', [username], (err, rows) => {
+    //     if(rows.length > 0) {
+    //         const user = rows[0];
+    //         const validPassword = helpers.matchPassword(password, user.password);
+            
+    //         if(validPassword) {
+    //             done(null, user, req.flash('success','Welcome ' + user.username));
+    //         } else {
+    //             done(null, false, req.flash('message','Incorrect Password'));
+    //         }
+    //     } else {
+    //         return done(null, false, req.flash('message', 'The Username does not exist'));
+    //     }
+    // });
 }));
 
 
