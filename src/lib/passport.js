@@ -28,20 +28,6 @@ passport.use('local.signin', new LocalStrategy({
         return done(null, false, req.flash('message', 'The Username does not exists'));
     }
     
-    // connection.query('SELECT * FROM users WHERE username = ?', [username], (err, rows) => {
-    //     if(rows.length > 0) {
-    //         const user = rows[0];
-    //         const validPassword = helpers.matchPassword(password, user.password);
-            
-    //         if(validPassword) {
-    //             done(null, user, req.flash('success','Welcome ' + user.username));
-    //         } else {
-    //             done(null, false, req.flash('message','Incorrect Password'));
-    //         }
-    //     } else {
-    //         return done(null, false, req.flash('message', 'The Username does not exist'));
-    //     }
-    // });
 }));
 
 
@@ -68,7 +54,7 @@ passport.use('local.signup', new LocalStrategy({
     const result = await connection.query('INSERT INTO users SET ?', [newUser]);
     console.log(result);
     newUser.id = result.insertId;
-    return done(null, newUser);
+    return done(null, newUser, req.flash('success', `Welcome to Contacts`));
 
 }));
 
