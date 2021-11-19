@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
@@ -29,7 +30,7 @@ app.set('view engine', '.hbs');
 
 // Middlewares
 app.use(session({
-    secret: 'secretmysqlnodesession',
+    secret: process.env.SECRET_SESSION,
     resave: false,
     saveUninitialized: false,
     store: new MySQLStore(database)

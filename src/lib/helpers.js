@@ -1,3 +1,4 @@
+require('dotenv').config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -19,7 +20,7 @@ helpers.matchPassword = async(password, savedPassword) => {
 
 helpers.encryptJwt = (contacts) => {
     contacts.forEach((e) => {
-        const token = jwt.sign({id: e.id}, 's3cr3tjwt');
+        const token = jwt.sign({id: e.id}, process.env.SECRET_JWT);
         e.id = token;
     });
 };
@@ -32,7 +33,7 @@ helpers.decryptJwt = (token) => {
             return false;
         }
     
-        const decoded = jwt.verify(token, 's3cr3tjwt');
+        const decoded = jwt.verify(token, process.env.SECRET_JWT);
         return decoded.id;
 
     } catch (error) {
