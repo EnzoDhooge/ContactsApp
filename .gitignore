@@ -1,5 +1,5 @@
-/node_modules
+node_modules/
 
-.env
+*.env
 
-/src/keys.js
+src/keys.js
