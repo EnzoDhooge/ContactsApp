@@ -1,6 +1,6 @@
-CREATE DATABASE database_contactapp;
+-- CREATE DATABASE database_contactapp;
 
-USE database_contactapp;
+-- USE database_contactapp;
 
 CREATE TABLE users(
     id INT(100) NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,
