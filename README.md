@@ -1,6 +1,7 @@
 # Aplicación de Contactos:
 
-<p>Podés ver la aplicación web desplegada haciendo <a href=”https://bestcontactsapp.herokuapp.com”>click aquí</a>.</p>
+
+[Podés ver la aplicación web desplegada en este enlace (https://bestcontactsapp.herokuapp.com)]
 
 <ul>
     <li>Contiene menú para "Iniciar sesión" y "Registro"</li>
